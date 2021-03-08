@@ -65,14 +65,27 @@ print("-----------------")
 # The function should return true if every word in the sentence has a length greater than x
 
 def wordLengthCounter(sentence, minimumLength):
-    words = sentence.split(" ")
-    for word in words:
-        if len(word) < minimumLength:
-            return False
-    return True
+  words = sentence.split(" ")
+  for word in words:
+    if len(word) < minimumLength:
+      return False
+  return True
 
 # Test 1 - Should return False
 print(wordLengthCounter("I like apples", 2))
 #Test 2 - Should return True
 print(wordLengthCounter("He likes apples", 2))
+print("-----------------")
+
+# Create a function that takes in a string as a parameter and returns that string in reverse
+def reverseString(word):
+  stringReversed = ""
+  for i in range(len(word) -1, -1, -1):
+    stringReversed += word[i]
+  return stringReversed
+
+# Test 1 - "Timothy"
+print(reverseString("Timothy"))
+#Test 2 - ""
+print(reverseString(" "))
 print("-----------------")
